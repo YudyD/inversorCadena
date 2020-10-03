@@ -26,8 +26,9 @@ public class inversorCadena {
         if (str.equals("")){
             return true;
         }else{
-            System.out.println("\033[31m"+str.substring(str.length()-1, str.length())+"\033[30m");
-            sarta(str.substring(0, str.length()-1));
+            for (int i = str.length; i > 0; i--){
+                System.out.println("\033[31m" + str.substring(i-1, i) + "\033[30m");
+            }
         }
         return false;
     }
